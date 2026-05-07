@@ -42,9 +42,9 @@
 │   ├── 01_dataset_check_participant_structure.ipynb
 │   ├── 02_make_windows_and_split_5fold_grouped.ipynb
 │   └── 03_supervised_and_simple_ssl_5fold_grouped.ipynb
-├── main.py                                   # минимальная точка входа проекта
-├── pyproject.toml                            # зависимости проекта
-├── uv.lock                                   # lock-файл uv
+├── pyproject.toml                            # описание проекта и зависимости для uv/pip
+├── uv.lock                                   # lock-файл uv для воспроизводимой установки
+├── requirements.txt                          # простой список зависимостей для pip
 ├── .python-version                           # Python 3.12
 ├── .gitignore
 └── README.md
@@ -179,19 +179,27 @@ X.shape = (5270, 6, 52)
 
 ## Установка
 
-Проект настроен под Python 3.12 и `uv`.
+Проект настроен под Python 3.12. Рекомендуемый способ установки - через `uv`, потому что в репозитории есть `uv.lock` с точными версиями пакетов.
 
 ```bash
 uv sync
 ```
 
-Если `uv` не установлен, зависимости можно поставить обычным `pip` из `pyproject.toml`:
+После этого команды можно запускать через `uv run`, например:
+
+```bash
+uv run jupyter notebook
+```
+
+Альтернативный способ - обычный `pip`. Для этого в репозитории есть `requirements.txt`:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install jupyter ipykernel matplotlib numpy pandas scikit-learn torch
+pip install -r requirements.txt
 ```
+
+`pyproject.toml` оставлен как основной файл описания Python-проекта: там указаны имя проекта, версия, требуемый Python и зависимости. `uv.lock` нужен тем, кто использует `uv`, чтобы получить максимально воспроизводимую среду. `requirements.txt` нужен для разработчиков, которым привычнее ставить зависимости через `pip`.
 
 ## Запуск
 
@@ -212,7 +220,7 @@ pip install jupyter ipykernel matplotlib numpy pandas scikit-learn torch
 uv run jupyter notebook
 ```
 
-или:
+Если зависимости установлены через `pip`, активируйте `.venv` и запустите:
 
 ```bash
 jupyter notebook

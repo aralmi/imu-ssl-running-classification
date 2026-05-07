@@ -1,7 +1,7 @@
 [project]
 name = "kurs-ml-ssl"
 version = "0.1.0"
-description = "Add your description here"
+description = "IMU running exercise classification with supervised and self-supervised learning baselines"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
