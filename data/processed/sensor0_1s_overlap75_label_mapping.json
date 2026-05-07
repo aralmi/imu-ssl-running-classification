@@ -1,0 +1,20 @@
+{
+  "label_to_id": {
+    "carioca_left": 0,
+    "carioca_right": 1,
+    "heel_to_butt": 2,
+    "high_knee_run": 3,
+    "running": 4,
+    "sideskips_left": 5,
+    "sideskips_right": 6
+  },
+  "id_to_label": {
+    "0": "carioca_left",
+    "1": "carioca_right",
+    "2": "heel_to_butt",
+    "3": "high_knee_run",
+    "4": "running",
+    "5": "sideskips_left",
+    "6": "sideskips_right"
+  }
+}

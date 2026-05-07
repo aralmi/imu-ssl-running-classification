@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+
+# Python bytecode and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env/
+
+# Python tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Jupyter/runtime files
+*.log
+
+# ML experiment artifacts that are usually generated locally.
+# The current prepared dataset and CSV results in data/processed/ are intentionally tracked.
+checkpoints/
+runs/
+wandb/
+mlruns/
+*.pt
+*.pth
+*.ckpt

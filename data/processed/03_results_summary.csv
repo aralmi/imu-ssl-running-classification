@@ -1,0 +1,6 @@
+,accuracy,accuracy,macro_f1,macro_f1,balanced_accuracy,balanced_accuracy
+,mean,std,mean,std,mean,std
+model,,,,,,
+masked_reconstruction_ssl_plus_finetune,0.7465483234714004,,0.7634105172753592,,0.7464217296113846,
+supervised_from_scratch,0.7938856015779092,,0.8045011709982853,,0.7937534209085934,
+temporal_permutation_ssl_plus_finetune,0.7248520710059172,,0.7369222378457215,,0.724808429118774,
